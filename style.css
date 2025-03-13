@@ -247,6 +247,14 @@ header form button:hover {
 
 .botao-menu {
     display: none;
+    background-color: #ff8800;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    width: 100%;
+    text-align: center;
 }
 
 footer {
@@ -256,6 +264,18 @@ footer {
     padding: 10px 0;
     width: 100%;
     margin-top: auto;
+}
+
+.submenu-btn {
+    display: none;
+    background-color: #ff8800;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+    text-align: center;
 }
 
 @media screen and (min-width: 1024px) {
@@ -336,6 +356,24 @@ footer {
     .submenu {
         position: static;
         width: 100%;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .submenu.ativo {
+        display: block;
+    }
+
+    .submenu-btn {
+        display: block;
+        background-color: #ff8800;
+        color: #ffffff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 1em;
+        width: 100%;
+        text-align: center;
     }
 
     .submenu li {
