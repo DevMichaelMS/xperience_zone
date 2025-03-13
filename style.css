@@ -12,6 +12,33 @@ body {
     min-height: 100vh;
 }
 
+
+
+.cabeçalho {
+    background-color: #ff8800;
+    text-align: center;
+    padding: 16px 0;
+    width: 100%;
+    position: relative;
+    left: 0;
+}
+
+.cabeçalho h1 {
+    color: #ffffff;
+}
+
+.cabeçalho button {
+    background-color: #ffae00;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.cabeçalho button:hover {
+    background-color: #af4600;
+    color: #ffffff;
+    font-weight: bold;
+}
+
 h2, h1, h3 {
     color: #ff8800;
 }
@@ -37,7 +64,7 @@ header .container {
 }
 
 header {
-    padding: 16px 0 0;
+    padding: 0;
     border-bottom: 1px solid #ff8800;
     margin-bottom: 56px;
 }
@@ -51,7 +78,7 @@ header form input[type="search"] {
 }
 
 header form input[type="search"]:focus {
-    border-color: #e67600;
+    border-color: #ff8800;
 }
 
 header form button {
