@@ -1,0 +1,343 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h2, h1, h3 {
+    color: #ff8800;
+}
+
+h3 {
+    text-align: center;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container.conteudo {
+    flex: 1;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    padding: 16px 0 0;
+    border-bottom: 1px solid #ff8800;
+    margin-bottom: 56px;
+}
+
+header form input[type="search"] {
+    border: 2px solid #ff8800;
+    padding: 8px;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+header form input[type="search"]:focus {
+    border-color: #e67600;
+}
+
+header form button {
+    background-color: #ff8800;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+header form button:hover {
+    background-color: #e67600;
+}
+
+.submenu {
+    display: none;
+    border: 1px solid rgb(149, 184, 248);
+    background-color: #ff8800;
+    position: absolute;
+    left: 0;
+    width: 300px;
+    top: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.menu > li {
+    color: #ff8800;
+    float: left;
+    list-style: none;
+    padding: 16px;
+    border-top: 4px solid transparent;
+    position: relative;
+}
+
+.menu > li > a {
+    text-decoration: none;
+    color: #ff8800;
+    font-weight: bold;
+}
+
+.menu li:hover .submenu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu li:hover {
+    border-color: #ff8800;
+}
+
+.submenu li {
+    display: block;
+    padding: 8px;
+}
+
+.clear {
+    clear: both;
+}
+
+.fachada {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.fachada img {
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #ffffff;
+    max-width: 100%;
+    height: auto;
+}
+
+.texto-historia {
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #ffffff;
+    max-width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+.texto-historia h2 {
+    margin-bottom: 10px;
+}
+
+#pc-gamer {
+    border-top: 1px solid #ff8800;
+    margin-top: 20px;
+}
+
+.lista-pc {
+    display: grid;
+    grid-template-columns: repeat(4, 24.5%);
+}
+
+.lista-pc img {
+    padding: 8px;
+    border-radius: 16px;
+    max-width: 100%;
+}
+
+.lista-pc li {
+    list-style: none;
+}
+
+.descriçao {
+    margin-left: 4px;
+    border: 1px solid #ff8800;
+    border-radius: 4px;
+
+}
+
+.descriçao li {
+    position: relative;
+    margin-left: 18px;
+    font-size: smaller;
+    padding-left: 20px;
+}
+
+.descriçao li::before {
+    content: 'º';
+    position: absolute;
+    left: 2%;
+    top: 0;
+    font-size: 1.2em;
+    color: black;
+}
+
+.lista-pc button {
+    padding: 8px 16px;
+    background-color: #ff8800;
+    color: #ffffff;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    display: block;
+    margin: 4px auto;
+    margin-bottom: 20px;
+}
+
+.a-vista {
+    text-align: center;
+    color: darkgreen;
+    display: block;
+    margin: 0 auto;
+}
+
+.parcelado {
+    text-align: center;
+    color: rgb(255, 62, 3);
+    display: block;
+    margin: 0 auto;
+}   
+
+.botao-menu {
+    display: none;
+}
+
+footer {
+    background-color: #ff8800;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+
+    .lista-pc {
+        grid-template-columns: repeat(4, 24.5%);
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu li {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .submenu {
+        position: static;
+        width: 100%;
+    }
+
+    .submenu li {
+        padding: 10px 0;
+    }
+
+    .conteudo {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+
+    #pc-gamer {
+        flex: 1;
+        display: grid;
+    }
+
+    .lista-pc {
+        grid-template-columns: repeat(2, 48%);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu li {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .botao-menu {
+        display: block;
+    }
+
+    .submenu {
+        position: static;
+        width: 100%;
+    }
+
+    .submenu li {
+        padding: 10px 0;
+    }
+
+    .fachada {
+        flex-direction: column;
+    }
+
+    .texto-historia {
+        max-width: 100%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .texto-historia h2 {
+        text-align: center;
+    }
+
+    .loja h2 {
+        text-align: center;
+    }
+
+    .loja p {
+        text-align: center;
+    }
+
+    .lista-pc {
+        grid-template-columns: 100%;
+    }
+}
